@@ -1,0 +1,29 @@
+inheritance
+
+
+
+class Theatre:
+    def input(self):
+        self._tName=input("Enter Theatre name:")
+        self._tLocation=input("Enter Theatre location:")
+        self._tSeats=int(input("Enter number of seats:"))
+    def show(self):
+        print(self._tName)
+        print(self._tLocation)
+        print(self._tSeats)
+    
+class Movie(Theatre):
+    def input1(self):
+        self.NoRooms=int(input("Enter number of rooms"))
+        self.MovieLang=input("Enter movie language")
+    def show1(self):
+        print(self.NoRooms)
+        print(self.MovieLang)
+
+t1=Movie()
+t1.input()
+t1.input1()
+t1.show()
+t1.show1()
+            
+            
