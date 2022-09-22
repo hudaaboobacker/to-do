@@ -1,0 +1,58 @@
+class emp:
+    eId=0
+    eName=""
+    eDept=""
+    eSal=0
+    eLeav=0
+ 
+ #default constructor
+    def __init__(self):
+        self.eId=102
+        self.eName="Pooja"
+        self.eDept="sales"
+        self.eSal=50000
+        self.eLeav=3
+        
+#parameterized constructor
+    #def __init__(self,eId,eName,eDept,eSal,eLeav):
+        #self.eId=eId
+        #self.eName=eName
+        #self.eDept=eDept
+        #self.eSal=eSal
+        #self.eLeav=eLeav
+    
+    def input(self):
+        self.eId=int(input("Enter Id:"))
+        self.eName=input("Enter name")
+        self.eDept=input("Enter department")
+        self.eSal=int(input("Enter basic salary"))
+        self.eLeav=int(input("Enter number of leaves"))
+        
+    def show(self):
+        print(self.eId)
+        print(self.eName)
+        print(self.eDept)
+        print(self.eSal)
+        print(self.eLeav)
+        
+    def totalSal(self):
+        hra=self.eSal*0.10 
+        cca=self.eSal*0.12
+        pf=self.eSal*0.05
+        leavAmt=(self.eSal/30)*self.eLeav
+        tSal=self.eSal+hra+cca-pf-leavAmt
+        print(tSal)
+        
+#e1=emp()
+#e1.input()
+#e1.show()
+#e1.totalSal()
+
+#calling of default constructor
+e2=emp()
+e2.show()
+e2.totalSal()
+
+#calling of parameterized constructor
+#e3=emp(203,"Asha","Marketing",35000,6)
+#e3.show()
